@@ -1,0 +1,6 @@
+
+hello world!
+
+this is my first git demo
+
+i think git is very useful
