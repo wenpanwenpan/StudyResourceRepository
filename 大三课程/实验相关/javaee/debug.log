@@ -1,0 +1,8 @@
+[0524/214045:ERROR:renderer_main.cc(203)] Running without renderer sandbox
+[0524/214054:WARNING:raw_channel_win.cc(473)] WriteFile: 管道正在被关闭。 (0xE8)
+[0524/214054:WARNING:channel.cc(549)] Failed to send message to remove remote endpoint (local ID 2147483649, remote ID 3)
+[0524/214054:WARNING:channel.cc(549)] Failed to send message to remove remote endpoint (local ID 2147483648, remote ID 2)
+[0524/214054:WARNING:raw_channel_win.cc(473)] WriteFile: 管道正在被关闭。 (0xE8)
+[0524/214054:WARNING:channel.cc(549)] Failed to send message to remove remote endpoint (local ID 1, remote ID 1)
+[0524/214054:WARNING:channel.cc(549)] Failed to send message to remove remote endpoint (local ID 2, remote ID 2147483648)
+[0524/214054:WARNING:channel.cc(315)] RawChannel write error

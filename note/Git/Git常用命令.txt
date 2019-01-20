@@ -1,0 +1,84 @@
+
+git与github使用简介：
+
+1.首先需要安装Git，然后可以利用Git在本地创建一个自己的本地仓库
+
+2.注册一个github账号，利用ssh的公钥将本地仓库和github上的远程仓库进行关联
+
+
+
+
+github常用命令：
+
+需要安装Git
+1.创建自己的本地仓库(打开Git Bash 切换到自己喜欢的目录)
+mkdir 仓库名称
+cd 仓库名称		--切换到仓库中
+git init		--初始化
+
+2.添加远程库：
+git remote add origin git@github.com:TaylorApril/Baidu.git		--换成自己远程库的名称
+git push -u origin master										--第一次将本地库push到远程库需要加 -u
+
+若报错，则先拉取git pull --rebase origin master
+再push:git push -u origin master
+
+3.添加到缓存区和提交到版本库
+git add 要添加的文件名
+git commit 要提交的文件名
+
+4.版本回退
+查看由最近到最远提交日志：
+git log --pretty=oneline
+
+版本回退计数：HEAD^上一个版本，HEAD~100:回退到前100个版本
+
+回退版本号：eg:回退版本commit id 为3628df的版本
+git reset --hard 3628df
+
+查看回退日志：
+git reflog
+
+5.撤销修改
+———>              git add files              git commit 
+working directory--------------stage-------------history
+<———         git checkout --files         git reset --files
+
+
+6.删除文件（readme.txt）
+rm readme.txt		--将该文件从本地版本库中删除
+git rm readme.txt
+
+
+7.分支
+创建分支：git branch 分支名称
+切换分支：git checkout 分支名称
+创建并且切换分支：git checkout -b 分支名称
+查看当前分支：git branch 
+合并指定分支到当前分支：git merge 分支名称（fast-forward快进模式）
+不用快速合并分支的方法：git merge --no-ff -m "merge with --no-ff" 分支名称
+删除分支：git branch -d 分支名称
+
+8.bug分支
+
+先使用git status查看当前状态
+然后使用git stash将当前现场保存
+然后创建并且切换到新建的bug分支：git checkout -b bug
+修改完成后进行合并，然后删除该分支
+
+9.多人协作
+
+查看远程库信息：git remote -v
+推送Dev分支：git push origin dev		--远程库默认名称为origin
+从远程克隆：git clone 仓库地址
+
+
+
+
+
+
+
+
+
+
+
